@@ -28,6 +28,3 @@ Includes 5 detection rules mapped to MITRE ATT&CK techniques.
 | New service installed | T1543.003 | 7045 |
 | Log clearing | T1070.001 | 1102 |
 | Admin account created | T1136.001 | 4720 |
-
-## Screenshots
-See /screenshots/ for Splunk dashboard examples.
