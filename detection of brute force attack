@@ -1,0 +1,13 @@
+| Brute Force Detection — T1110
+| Fires when 5+ failed logins from same IP in 5 min
+
+index=windows EventCode=4625
+| stats count by src_ip, user, host
+| where count > 5
+| eval severity=case(
+    count>=20, "CRITICAL",
+    count>=10, "HIGH",
+    count>=5,  "MEDIUM"
+  )
+| table _time, src_ip, user, host, count, severity
+| sort -count
