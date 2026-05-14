@@ -1,4 +1,3 @@
-
 Splunk · SPL · MITRE ATT&amp;CK
 # SOC Detection Lab
 
